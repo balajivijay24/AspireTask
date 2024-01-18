@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\balaji.vijay\\Downloads\\RoleBasedAuthentication (1)\\RoleBasedAuthentication\\RoleBasedAuthentication.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\balaji.vijay\\Downloads\\RoleBasedAuthentication (1)\\RoleBasedAuthentication\\RoleBasedAuthentication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\balaji.vijay\\Downloads\\RoleBasedAuthentication (1)\\RoleBasedAuthentication\\RoleBasedAuthentication.csproj",
+        "projectName": "RoleBasedAuthentication",
+        "projectPath": "C:\\Users\\balaji.vijay\\Downloads\\RoleBasedAuthentication (1)\\RoleBasedAuthentication\\RoleBasedAuthentication.csproj",
+        "packagesPath": "C:\\Users\\balaji.vijay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\balaji.vijay\\Downloads\\RoleBasedAuthentication (1)\\RoleBasedAuthentication\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\balaji.vijay\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "system.data.sqlclient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "system.security.claims": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

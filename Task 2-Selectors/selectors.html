@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Selectors Example</title>
+    <style>
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="balaji">Hi I am Balaji V.</div>
+    <p class="highlight">Attention Always.</p>
+    <p>we follow orbit culture.</p>
+    <button onclick="modifyElements()">click here</button>
+ 
+    <script>
+        function modifyElements() {
+            
+            let elementById = document.getElementById('balaji');
+            elementById.textContent = 'Hey Aspiriant!';
+ 
+          
+            let elementsByClass = document.getElementsByClassName('highlight');
+            if (elementsByClass.length > 0) {
+                elementsByClass[0].textContent = 'welcome Aspire system';
+            }
+ 
+            
+            let elementsByTag = document.getElementsByTagName('p');
+            if (elementsByTag.length > 0) {
+                elementsByTag[0].style.fontStyle = 'italic';
+            }
+ 
+           
+            
+            let querySelect = document.querySelector('p.highlight');
+            if (querySelect) {
+querySelect.style.backgroundColor = 'yellow';
+            }
+ 
+            
+            let querySelectAll = document.querySelectorAll('p');
+            if (querySelectAll.length > 0) {
+                querySelectAll.forEach((element) => {
+element.style.border = '1px solid black';
+                });
+            }
+        }
+    </script>
+</body>
+</html>

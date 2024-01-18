@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.css">
+    <title>Sign In</title>
+</head>
+
+
+<body>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.login-container {
+    text-align: center;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.password-recovery {
+    margin-top: 10px;
+}
+
+.password-recovery a {
+    text-decoration: none;
+    color: #333;
+}
+
+.password-recovery a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+    </style>
+
+    <div class="login-container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="20">
+            <div class="error" id="username-error"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            <div class="error" id="password-error"></div>
+
+            <button type="button" onclick="validateSignIn()">Sign In</button>
+        </form>
+
+        <div class="password-recovery">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $("#signInForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 20
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "Please enter your username",
+                        minlength: "Username must be at least 3 characters",
+                        maxlength: "Username must not exceed 20 characters"
+                    },
+                    password: {
+                        required: "Please enter your password",
+                        minlength: "Password must be at least 6 characters"
+                    }
+                },
+                errorPlacement: function (error, element) {
+                    
+                    error.appendTo("#" + element.attr("id") + "-error");
+                }
+            });
+        });
+
+        
+        function validateSignIn() {
+            
+            if ($("#signInForm").valid()) {
+                var username = $("#username").val();
+                var password = $("#password").val();
+
+                alert("Welcome to the Aspire System! " + username);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
